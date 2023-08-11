@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    /* Reset default styles */
+    body, h1, h2, h3, p, ul, li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Base Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #081b29;
+    }
+
+    /* Container Styles */
+    .testimonials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Swiper Styles */
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff 0%, #098f35 100%);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .swiper-slide img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      filter: brightness(150%) saturate(120%);
+      margin-bottom: 15px;
+    }
+
+    .testimonial-image {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .testimonial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper-slide h2 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .swiper-slide p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .swiper-slide:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .swiper-slide {
+        padding: 20px;
+        margin: 20px 0;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .swiper-slide {
+        padding: 30px;
+      }
+      .swiper-slide img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="testimonials">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="2.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Sara Lee</h2>
+              <p>CFO of Acme Co</p>
+              <p>"I thought it was impossible to make a website as beautiful as our product, but Kimutai proved me wrong."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="5.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Mike Johnson</h2>
+              <p>COO of DEF Corp</p>
+              <p>"I've never met a web developer who truly cares about their clients' success like Kimutai does."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more testimonials with images -->
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="7.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Liang loi</h2>
+              <p>Full-stack Ninja</p>
+              <p>"Kimutai transformed our outdated website into a modern masterpiece. Highly recommended!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="9.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Mohammed Faruque</h2>
+              <p>CEO of XYZ Corp</p>
+              <p>"Kimutai's expertise and dedication are unmatched. Our website has never looked better!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="10.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Grace Turner</h2>
+              <p>Fitness Coach</p>
+              <p>"I'm impressed by your expertise in creating an engaging platform for my website it pushes us towards fitness victories!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 6 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="8.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Lily Roberts</h2>
+              <p>Author and Writer</p>
+              <p>"Thank you  Kimutai, my personal writing website stands out. The clean design, has made it a go-to destination for literary enthusiasts"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 7 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="1.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Daniel Wilson</h2>
+              <p>SEO P-Rio Solutions</p>
+              <p>"After KImutai optimized our website, our traffic increased by 50%. We can't thank them enough!"</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 8 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="4.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Rachel Andy</h2>
+              <p>Photographer</p>
+              <p>" The design and layout the webiste perfectly showcase my portfolio, and the seamless user experience has impressed my clients."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 9 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="13.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Sophia Adams</h2>
+              <p>Artist</p>
+              <p>"Kimutai captured the essence of my work beautifully on my personal website. I'm impressed by his talent and dedication."</p>
+            </div>
+          </div>
+        </div>
+        <!-- Testimonial 10 -->
+        <div class="swiper-slide">
+          <div class="card">
+            <div class="card-content">
+              <img src="12.jpg" alt="Testimonial Image" class="testimonial-image">
+              <h2>@Olivia Martinez</h2>
+              <p>Marketing Manager at GHI Inc.</p>
+              <p>"Your skills and attention to detail are outstanding. Thrilled with the results"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 30,
+        stretch: 10,
+        depth: 60,
+        modifier: 2,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      on: {
+        slideChangeTransitionStart: function () {
+          var swiperWrapper = document.querySelector('.swiper-wrapper');
+          if (swiper.realIndex > swiper.previousIndex) {
+            swiperWrapper.classList.add('move-next');
+          } else {
+            swiperWrapper.classList.add('move-prev');
+          }
+        },
+        slideChangeTransitionEnd: function () {
+          var swiperWrapper = document.querySelector('.swiper-wrapper');
+          swiperWrapper.classList.remove('move-next');
+          swiperWrapper.classList.remove('move-prev');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

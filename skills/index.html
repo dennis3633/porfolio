@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web Development - Futuristic Theme</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      color: #fff;
+      background: radial-gradient(#061727, #040b13);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+    }
+
+    .title-container {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #14ffec;
+      text-shadow: 2px 2px 4px rgba(20, 255, 236, 0.5);
+    }
+
+    .all {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .skill {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: conic-gradient(#14ffec, #ff14d4, #ff8814);
+      box-shadow: 0 0 10px rgba(255, 255, 255, .6);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all .3s ease;
+      position: relative;
+      overflow: hidden;
+      transform-style: preserve-3d;
+    }
+
+    .skill i {
+      font-size: 40px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .text {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity .3s ease;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .skill:hover .text {
+      opacity: 1;
+    }
+
+    .skill:hover {
+      animation: tilt 0.6s linear infinite alternate, pulse 1s ease infinite;
+      box-shadow: 0 0 15px rgba(255, 255, 255, .8);
+      transform: translateY(-5px) rotateX(10deg);
+    }
+
+    @keyframes tilt {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(45deg);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* Terminal Styles */
+    .terminal-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 40px;
+      animation: terminal-slide 1s ease;
+    }
+
+    .terminal {
+      width: 100%;
+      max-width: 400px;
+      height: 200px;
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      overflow-y: auto;
+      border-radius: 5px;
+      padding: 10px;
+      white-space: pre-wrap;
+      color: #14ffec;
+      font-size: 14px;
+      line-height: 1.4;
+      font-family: 'Courier New', monospace;
+      animation: terminal-blink 7s infinite;
+    }
+
+    .cursor {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      width: 6px;
+      height: 14px;
+      background: #14ffec;
+      animation: cursor-blink 0.8s infinite;
+    }
+
+    @keyframes terminal-blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.1;
+      }
+    }
+
+    @keyframes cursor-blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Device Responsive Styles */
+    @media screen and (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+      .all {
+        gap: 10px;
+      }
+      .skill {
+        width: 120px;
+        height: 120px;
+        font-size: 20px;
+      }
+      .skill i {
+        font-size: 30px;
+      }
+      .text {
+        font-size: 12px;
+      }
+      .terminal {
+        max-width: 300px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 30px;
+      }
+      .all {
+        gap: 5px;
+      }
+      .skill {
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+      }
+      .skill i {
+        font-size: 24px;
+      }
+      .text {
+        font-size: 10px;
+      }
+      .terminal {
+        max-width: 250px;
+      }
+    }
+
+    /* Animation Keyframes */
+    @keyframes terminal-slide {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="title-container">
+    <h1>Other Skills</h1>
+  </div>
+  <div class="all">
+    <div class="skill">
+      <i class="fas fa-code"></i>
+      <div class="text">Ethical Hacking</div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-code-branch"></i>
+      <div class="text">Cyber Security</div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-laptop-code"></i>
+      <div class="text">Cryptography</div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-network-wired"></i>
+      <div class="text">Networking</div>
+    </div>
+    <div class="skill">
+      <i class="fas fa-shield-alt"></i>
+      <div class="text">Web Security</div>
+    </div>
+  </div>
+
+  <!-- Hacking Terminal -->
+  <div class="terminal-container">
+    <div class="terminal" id="terminal-text"></div>
+    <span class="cursor"></span>
+  </div>
+
+  <script>
+    const hackingText = [
+      "hacking@webdev:~$ Access granted.",
+      "hacking@webdev:~$ Initializing...",
+      "hacking@webdev:~$ Target acquired.",
+      "hacking@webdev:~$ Decrypting passwords...",
+      "hacking@webdev:~$ Sending exploits...",
+      "hacking@webdev:~$ Hacking complete!",
+      "hacking@webdev:~$ Press any key to continue..."
+    ];
+
+    let terminalText = document.getElementById("terminal-text");
+    let charIndex = 0;
+    let hackingIndex = 0;
+
+    function typeText() {
+      if (charIndex < hackingText[hackingIndex].length) {
+        terminalText.innerHTML += hackingText[hackingIndex].charAt(charIndex);
+        charIndex++;
+        terminalText.scrollTop = terminalText.scrollHeight; // Auto-scroll to the bottom
+      } else {
+        terminalText.innerHTML += "<br>"; // Add a line break after each line of text
+        charIndex = 0;
+        hackingIndex = (hackingIndex + 1) % hackingText.length;
+      }
+
+      setTimeout(typeText, 100); // Type the next character after 100ms
+    }
+
+    document.addEventListener("DOMContentLoaded", typeText);
+  </script>
+</body>
+</html>

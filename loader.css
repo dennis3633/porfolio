@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,700');
+
+body {
+  background: #000;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 300px;
+  height: 30px;
+  border: 2px solid #b2b2b2;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.box {
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(to bottom, #2838c7, #5979ef, #869ef3, #5979ef, #2838c7);
+  display: inline-block;
+  margin-right: 2px;
+  animation: loader 2s infinite linear;
+}
+
+.logo {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo p {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.top:after {
+  content: "\00a9";
+  font-size: 16px;
+  position: relative;
+  top: -6px;
+  margin-left: 2px;
+}
+
+.mid {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.mid span {
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: top;
+  color: #FF6821;
+  margin-top: -14px;
+}
+
+.logo .bottom {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40px;
+  margin-left: 5px;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
